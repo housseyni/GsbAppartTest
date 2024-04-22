@@ -37,5 +37,17 @@
             </li>
             <!-- Ajoutez ici d'autres détails de l'appartement si nécessaire -->
         </ul>
+
+        <div>
+            <form action="{{ route('confirmation-location') }}" method="GET">
+                @csrf
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80">Louer</button>
+            </form>
+
+            <form action="{{ route('confirmation-achat') }}" method="GET">
+                @csrf
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80">Acheter</button>
+            </form>
+        </div>
     </div>
 @endsection

@@ -20,12 +20,23 @@ Route::get('/', function () {
 Route::get('/appartements', [AppartementController::class, 'index'])->name('appartements.index');
 Route::get('/appartements/{appartement}', [AppartementController::class, 'show'])->name('appartements.show');
 
+Route::get('/confirmation-location', function () {
+    return view('confirmation-location');
+})->name('confirmation-location');
+
+
+Route::get('/confirmation-achat', function () {
+    return view('confirmation-achat');
+})->name('confirmation-achat');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return redirect('/appartements');
+    })->name('dashboard'); // Nommez la route dashboard plutôt que appartements.index
 });
