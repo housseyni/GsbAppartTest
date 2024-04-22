@@ -38,16 +38,20 @@
             <!-- Ajoutez ici d'autres détails de l'appartement si nécessaire -->
         </ul>
 
-        <div>
+        @if(Auth::check() && Auth::user()->is_client)
+        <div class="grid grid-cols-2 gap-4 mt-4">
             <form action="{{ route('confirmation-location') }}" method="GET">
                 @csrf
-                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80">Louer</button>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80 w-full">Louer</button>
             </form>
-
+        
             <form action="{{ route('confirmation-achat') }}" method="GET">
                 @csrf
-                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80">Acheter</button>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80 w-full">Acheter</button>
             </form>
         </div>
+        
+        
     </div>
+    @endif
 @endsection

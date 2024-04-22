@@ -16,7 +16,7 @@
 
                     <form action="{{ route('appartements.show', $appartement->NumAppart) }}" method="GET">
                         @csrf
-                        <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80">Voir les détails</button>
+                        <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:opacity-80 mt-4">Voir les détails</button>
                     </form>
                     <!-- Ajoutez ici d'autres détails de l'appartement -->
                 </div>
@@ -24,3 +24,4 @@
         </div>
     </div>
 @endsection
+

@@ -45,7 +45,7 @@ class AppartementSeeder extends Seeder
         $appartement->Preavis = '3 mois';
         $appartement->DateLibre = '2024-06-01';
         $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
-        $appartement->Proprietaire = 2; // Remplacer par l'ID du propriétaire
+        $appartement->Proprietaire = 1; // Remplacer par l'ID du propriétaire
         $appartement->save();
 
         // Créer un troisième appartement factice
@@ -61,7 +61,89 @@ class AppartementSeeder extends Seeder
         $appartement->Preavis = '2 mois';
         $appartement->DateLibre = '2024-07-01';
         $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
+        $appartement->Proprietaire = 2; // Remplacer par l'ID du propriétaire
+        $appartement->save();
+
+
+
+        $appartement = new Appartement();
+        $appartement->NumAppart = $cptNumAppart++;
+        $appartement->Rue = 'Rue Auguste Isaac';
+        $appartement->Arrondissement = 'Lyon 1er';
+        $appartement->Etage = 2;
+        $appartement->TypeAppart = 'Appartement 3 pièces';
+        $appartement->PrixLoc = 2000;
+        $appartement->PrixCharge = 300;
+        $appartement->Ascenseur = 'Non';
+        $appartement->Preavis = '2 mois';
+        $appartement->DateLibre = '2024-07-01';
+        $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
+        $appartement->Proprietaire = 2; // Remplacer par l'ID du propriétaire
+        $appartement->save();
+
+
+        // Créer un quatrième appartement factice
+        $appartement = new Appartement();
+        $appartement->NumAppart = $cptNumAppart++;
+        $appartement->Rue = 'Boulevard Haussmann';
+        $appartement->Arrondissement = 'Paris 8ème';
+        $appartement->Etage = 4;
+        $appartement->TypeAppart = 'Studio';
+        $appartement->PrixLoc = 1000;
+        $appartement->PrixCharge = 150;
+        $appartement->Ascenseur = 'Oui';
+        $appartement->Preavis = '1 mois';
+        $appartement->DateLibre = '2024-08-01';
+        $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
         $appartement->Proprietaire = 3; // Remplacer par l'ID du propriétaire
+        $appartement->save();
+
+        // Créer un cinquième appartement factice
+        $appartement = new Appartement();
+        $appartement->NumAppart = $cptNumAppart++;
+        $appartement->Rue = 'Rue de Rivoli';
+        $appartement->Arrondissement = 'Paris 1er';
+        $appartement->Etage = 3;
+        $appartement->TypeAppart = 'Appartement 2 pièces';
+        $appartement->PrixLoc = 1800;
+        $appartement->PrixCharge = 250;
+        $appartement->Ascenseur = 'Oui';
+        $appartement->Preavis = '2 mois';
+        $appartement->DateLibre = '2024-09-01';
+        $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
+        $appartement->Proprietaire = 4; // Remplacer par l'ID du propriétaire
+        $appartement->save();
+
+        // Créer un sixième appartement factice
+        $appartement = new Appartement();
+        $appartement->NumAppart = $cptNumAppart++;
+        $appartement->Rue = 'Avenue des Gobelins';
+        $appartement->Arrondissement = 'Paris 13ème';
+        $appartement->Etage = 2;
+        $appartement->TypeAppart = 'Appartement 4 pièces';
+        $appartement->PrixLoc = 2200;
+        $appartement->PrixCharge = 300;
+        $appartement->Ascenseur = 'Oui';
+        $appartement->Preavis = '3 mois';
+        $appartement->DateLibre = '2024-10-01';
+        $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
+        $appartement->Proprietaire = 5; // Remplacer par l'ID du propriétaire
+        $appartement->save();
+
+        // Créer un septième appartement factice
+        $appartement = new Appartement();
+        $appartement->NumAppart = $cptNumAppart++;
+        $appartement->Rue = 'Boulevard Saint-Michel';
+        $appartement->Arrondissement = 'Paris 5ème';
+        $appartement->Etage = 1;
+        $appartement->TypeAppart = 'Studio';
+        $appartement->PrixLoc = 1200;
+        $appartement->PrixCharge = 200;
+        $appartement->Ascenseur = 'Non';
+        $appartement->Preavis = '2 mois';
+        $appartement->DateLibre = '2024-11-01';
+        $appartement->image_path = '/appartement_' . $cpt++ . '.jpg';
+        $appartement->Proprietaire = 6; // Remplacer par l'ID du propriétaire
         $appartement->save();
     }
 }
